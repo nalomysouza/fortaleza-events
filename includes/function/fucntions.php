@@ -481,7 +481,7 @@ function search_agenda_list(){
             'orderby'           => 'meta_value',
             'meta_key'          => '_start_date',
             'meta_type'         => 'DATE',
-            'order'             => 'DESC',
+            'order'             => 'ASC',
             'posts_per_page' => -1
 
         );
@@ -528,7 +528,7 @@ function search_agenda_list(){
                         array(
                            'key' => '_start_date',
                            'value' => $_start_date,
-                           'compare' => 'LIKE'            
+                           'compare' => 'LIKE'
                             ),
                     );        
         endif;
@@ -618,7 +618,7 @@ add_action("wp_ajax_nopriv_search_agenda_list", 'search_agenda_list');
                      'orderby'           => 'meta_value',
                      'meta_key'          => '_start_date',
                      'meta_type'         => 'DATE',
-                     'order'             => 'DESC',
+                     'order'             => 'ASC',
                      'posts_per_page' => -1,
                          'tax_query' => array(
                             array(

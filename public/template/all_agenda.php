@@ -67,11 +67,19 @@
                      'orderby'           => 'meta_value',
                      'meta_key'          => '_start_date',
                      'meta_type'         => 'DATE',
-                     'order'             => 'DESC',
+                     'order'             => 'ASC',
                      'posts_per_page' => -1
                 );
 
-                $the_query = new WP_Query( $args );
+                $args['meta_query']=array(
+                    array(
+                        'key' => '_start_date',
+                        'value' => date('Y-m-d'),
+                        'compare' => '>='
+                    ),
+                );
+
+        $the_query = new WP_Query( $args );
                 $listing_layout=get_option('listing_layout');
                 if($listing_layout=='three_colums'){
                     $class='one_Third';
