@@ -244,13 +244,13 @@ display:none;
                                  if(!empty($post_id)){?>
                                 <button id="delete_event" rel1="<?php echo $post_id; ?>"><?php _e('Eliminar evento');?></button>
                                 <?php }else{ ?>
-               <button id="get_event" rel1="<?php echo $evnt_img; ?>" rel2="<?php echo $list->name; ?>" rel3="<?php echo $list->terms->linguagem[0]; ?>" rel4="<?php echo $list->classificacaoEtaria; ?>" rel5="<?php echo $list->owner->name; ?>"rel6="<?php echo $list->shortDescription; ?>" date="<?php echo $details->rule->startsOn; ?>" start_time="<?php echo $details->rule->startsAt ?>" end_time="<?php echo $details->rule->endsAt; ?>" price="<?php echo $details->rule->price; ?>" spaceID="<?php echo $details->rule->spaceId;?>"address="<?php echo $details->rule->description;?>"><?php _e('Añadir evento');?></button>                 
+               <button id="get_event" rel1="<?php echo $evnt_img; ?>" rel2="<?php echo $list->name; ?>" rel3="<?php echo $list->terms->linguagem[0]; ?>" rel4="<?php echo $list->classificacaoEtaria; ?>" rel5="<?php echo $list->owner->name; ?>"rel6="<?php echo $list->longDescription; ?>" date="<?php echo $details->rule->startsOn; ?>" start_time="<?php echo $details->rule->startsAt ?>" end_time="<?php echo $details->rule->endsAt; ?>" price="<?php echo $details->rule->price; ?>" spaceID="<?php echo $details->rule->spaceId;?>"address="<?php echo $details->rule->description;?>"><?php _e('Añadir evento');?></button>
     <input type='hidden' name='entries[<?php echo $key_val?>][event_image]' value="<?php echo $evnt_img; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][event_name]' value="<?php echo $list->name; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][event_language]' value="<?php echo $list->terms->linguagem[0]; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][age_rating]' value="<?php echo $list->classificacaoEtaria; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][event_author]' value="<?php echo $list->owner->name; ?>"/>
-    <input type='hidden' name='entries[<?php echo $key_val?>][event_content]' value="<?php echo $list->shortDescription; ?>"/>
+    <input type='hidden' name='entries[<?php echo $key_val?>][event_content]' value="<?php echo $list->longDescription; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][start_date]' value="<?php echo $details->rule->startsOn; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][start_time]' value="<?php echo $details->rule->startsAt; ?>"/>
     <input type='hidden' name='entries[<?php echo $key_val?>][end_time]' value="<?php echo $details->rule->endsAt; ?>"/>
